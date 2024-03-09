@@ -5,7 +5,7 @@ const Upload = async (req, res) => {
     try {
         let file=""
         if(req.file){
-            file=`files/${req.file.filename}`
+            file=`temp/${req.file.filename}`
         }
         const note = new pdfModel({
             user_Id: req.user_Id, // Make sure these values are available in req.body
@@ -36,7 +36,7 @@ const UPDATE = async(req,res)=>{
     try {
         let file = ""
         if(req.file){
-            file=`files/${req.file.filename}`
+            file=`temp/${req.file.filename}`
         }
         req.body.file = file
 
