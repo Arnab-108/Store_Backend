@@ -76,7 +76,7 @@ const UpdateUser = async (req, res) => {
     try {
         let imgurl = ""
         if (req.file) {
-            imgurl = `temp/${req.file.filename}`
+            imgurl = `tmp/${req.file.filename}`
         }
         req.body.avatar = imgurl
 
